@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="echarts.js"></script>
+</head>
+<body>
+<div id="main" style="width: 600px;height:400px"></div>
+<script>
+  const myChart=echarts.init(document.getElementById('main'))
+  const data=[]
+  for (let i = 0; i < 5; i++) {
+    data.push(Math.round(Math.random()*200))
+  }
+  const option={
+    xAxis: {
+      max:'dataMax'
+    },
+    yAxis: {
+      type:'category',
+      data:['A','B','C','D','E'],
+      inverse:true,//Y轴从下往上是数据从小到大排序
+      animationDuration:300,//第一次柱条排序
+      animationDurationUpdate:300,//第一次后柱条排序
+      max:2//显示前n名，则值为n-1
+    },
+    series: [
+      {
+        realtimeSort:true,//开启动态排序
+        name:'X',
+        type: 'bar',
+        data:data,
+        label:{
+          show:true,
+          position:'right',
+          valueAnimation:true//实时改变标签
+        }
+      }
+    ],
+    legend:{
+      show: true
+    },
+    animationDuration: 3000,//第一次
+    animationDurationUpdate: 3000,//每次更新时长
+    animationEasing:'linear',
+    animationEasingUpdate:'linear'
+  };
+  function update() {
+    const data=option.series[0].data;
+    for (let i = 0; i < data.length; i++) {
+      if (Math.random()>0.9){
+        data[i]+=Math.round(Math.random()*2000)
+      }else {
+        data[i]+=Math.round(Math.random()*200)
+      }
+    }
+    myChart.setOption(option);
+  }
+  setInterval(function () {
+    update()
+  },3000)
+</script>
+</body>
+</html>

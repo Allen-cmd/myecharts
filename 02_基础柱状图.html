@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="echarts.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 600px;height:400px"></div>
+    <script>
+        const mycharts=echarts.init(document.getElementById('main'))
+        const option={
+            xAxis: {
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            },
+            yAxis: {},
+            series: [
+                {
+                    type: 'bar',
+                    data: [23, 24, 18, 25, 27, 28, 25]
+                }
+            ]
+        }
+        myChart.setOption(option);
+    </script>
+</body>
+</html>
