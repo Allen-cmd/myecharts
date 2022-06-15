@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="echarts.js"></script>
+</head>
+<body>
+<div id="main" style="width: 600px;height:400px"></div>
+<script>
+  //echarts
+  const myChart = echarts.init(document.getElementById('main'))
+  //配置项和数据
+  const option = {
+    xAxis: {
+      data:['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
+    },
+    yAxis: {
+
+    },
+    series: [
+      {
+        type:'scatter',
+        data:[220,182,143,234,156,78,109]
+      }
+    ]
+  }
+  myChart.setOption(option);
+</script>
+</body>
+</html>
