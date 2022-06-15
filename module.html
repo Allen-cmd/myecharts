@@ -8,17 +8,15 @@
 <body>
 <div id="main" style="width: 600px;height:400px"></div>
 <script>
-    const mycharts = echarts.init(document.getElementById('main'))
+    //echarts
+    const myChart = echarts.init(document.getElementById('main'))
+    //配置项和数据
     const option = {
         xAxis: {
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
         },
-        yAxis: {},
+        yAxis: {
+        },
         series: [
-            {
-                type: 'bar',
-                data: [23, 24, 18, 25, 27, 28, 25]
-            }
         ]
     }
     myChart.setOption(option);

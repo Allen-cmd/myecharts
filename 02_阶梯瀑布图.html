@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-  <script src="echarts.js"></script>
+    <script src="echarts.js"></script>
 </head>
 <body>
 <div id="main" style="width: 600px;height:400px"></div>
 <script>
     //阶梯瀑布图表面 数组中的数据是对前一个值的增减
-    const myChart=echarts.init(document.getElementById('main'))
+    const myChart = echarts.init(document.getElementById('main'))
     const data = [900, 345, 393, -108, -154, 135, 178, 286, -119, -361, -203];
     const help = [];
     const positive = [];
@@ -34,45 +34,45 @@
             }
         }
     }
-    const option={
-        title:{
-            text:'waterfall'
+    const option = {
+        title: {
+            text: 'waterfall'
         },
-        grid:{
-            left:'3%',
-            right:'4%',
-            bottom:'3%',
-            containLabel:true
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
         },
-        xAxis:{
-            type:'category',
-            splitLine:{show:false},
-            data:(function (){
-                const  list=[];
+        xAxis: {
+            type: 'category',
+            splitLine: {show: false},
+            data: (function () {
+                const list = [];
                 for (let i = 1; i < 11; i++) {
                     list.push('Oct/' + i);
                 }
                 return list;
             })()
         },
-        yAxis:{
-            type:'value'
+        yAxis: {
+            type: 'value'
         },
-        series:[
+        series: [
             {
-                type:'bar',
-                stack:'all',
-                itemStyle:{
-                    normal:{
-                        barBorderColor:'rgba(0,0,0,0)',
-                        color:'rgba(0,0,0,0)'
+                type: 'bar',
+                stack: 'all',
+                itemStyle: {
+                    normal: {
+                        barBorderColor: 'rgba(0,0,0,0)',
+                        color: 'rgba(0,0,0,0)'
                     },
                     emphasis: {
                         barBorderColor: 'rgba(0,0,0,0)',
                         color: 'rgba(0,0,0,0)'
                     }
                 },
-                data:help
+                data: help
             },
             {
                 name: 'positive',

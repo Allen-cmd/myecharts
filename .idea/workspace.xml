@@ -4,7 +4,15 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c9560c0-316a-4f3b-b18f-9d8017c76695" name="变更" comment="aaa" />
+    <list default="true" id="8c9560c0-316a-4f3b-b18f-9d8017c76695" name="变更" comment="aaa">
+      <change beforePath="$PROJECT_DIR$/01_first.html" beforeDir="false" afterPath="$PROJECT_DIR$/01_first.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02_动态排序柱状图.html" beforeDir="false" afterPath="$PROJECT_DIR$/02_动态排序柱状图.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02_基础柱状图.html" beforeDir="false" afterPath="$PROJECT_DIR$/02_基础柱状图.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02_堆叠柱状图.html" beforeDir="false" afterPath="$PROJECT_DIR$/02_堆叠柱状图.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02_阶梯瀑布图.html" beforeDir="false" afterPath="$PROJECT_DIR$/02_阶梯瀑布图.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/echarModule.html" beforeDir="false" afterPath="$PROJECT_DIR$/echarModule.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/echarts.js" beforeDir="false" afterPath="$PROJECT_DIR$/echarts.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +36,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2AYumt0ISLX4qmBRa23dsrF5sTd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -42,10 +50,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/VScodeWork/H5/echars",
+    "last_opened_file_path": "E:/VScodeWork/H5/myecharts",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "diff.base",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -66,6 +74,8 @@
       <workItem from="1655255642648" duration="3577000" />
       <workItem from="1655268689147" duration="2310000" />
       <workItem from="1655271084165" duration="608000" />
+      <workItem from="1655272139711" duration="1295000" />
+      <workItem from="1655275003434" duration="1196000" />
     </task>
     <task id="LOCAL-00001" summary="首次使用echar，学习柱状图">
       <created>1655268915662</created>

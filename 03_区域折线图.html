@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="echarts.js"></script>
+</head>
+<body>
+<div id="main" style="width: 600px;height:400px"></div>
+<script>
+    //echarts
+    const myChart = echarts.init(document.getElementById('main'))
+    //配置项和数据
+    const option = {
+        xAxis: {
+            typeL:'category',
+            data:['A','B','C']
+        },
+        yAxis: {
+            type:"value"
+        },
+        series: [
+            {
+                data:[120,200,150],
+                type:'line',
+                areaStyle:{
+                    backgroundColor:'red',
+                    opacity:0.5
+                }
+            },
+            {
+                data:[100,180,130],
+                type:'line',
+                areaStyle:{
+                    backgroundColor:'yellow',
+                    opacity:0.5
+                }
+            }
+        ]
+    }
+    myChart.setOption(option);
+</script>
+</body>
+</html>

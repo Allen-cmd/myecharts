@@ -1,69 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-  <script src="echarts.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="echarts.js"></script>
 </head>
 <body>
 <div id="main" style="width: 600px;height:400px"></div>
 <script>
-  //echarts
-  const myChart=echarts.init(document.getElementById('main'))
-  //配置项和数据
-  const option={
-    //标题组件
-    title:{
-      text:'',//主标题
-      textStyle:{}//文本样式
-      //还有阴影效果，内边距 外边距 背景颜色
-    },
-    //图例组件
-    legend:{
-      show:Boolean//显示每条小型信息
-    },
-    grid:{
-      show:Boolean,//显示直角坐标
-      containLabel:Boolean,//grid 区域是否包含坐标轴的刻度标签。
-      //边距距离 背景颜色 阴影
-    },
-    //x轴
-    xAxis: {
-      data: [],//数据
-      show:Boolean,//是否显示x轴
-      type:'',//坐标轴类型 数据value 时间time 类目category
-      max:"",//坐标轴刻度值 值为 n-1  特殊值 'dataMax'，此时取数据在该轴上的最大值作为最大刻度
-      splitLine:{//分割线
-        show:Boolean,//是否显示分隔线。默认数值轴显示，类目轴不显示。
-      }
-      //定位 文字样式
-    },
-    //y轴
-    yAxis: {
-      data:[],//数据
-      show:Boolean,//是否显示y轴
-      type:'',//坐标轴类型 数据value 时间time 类目category
-      inverse:Boolean,//是否反向坐标轴
-      //定位 文字样式 分割线 等
-    },
-    //
-    series: [
-      {
-        type: '',//图类型 bar柱状图
-        data: [],
-        name:'',//柱条命名
-        realtimeSort:Boolean,//是否动态排序
-        stack:'',//用来表明哪些系列将被堆积在一起，理论上只要取值相同即可，具体的取值并没有什么区别
-        label:{
-          show:Boolean,//是否显示柱条数据标签
-          position:'',//数据标签的位置 top left ..
-          valueAnimation:Boolean,//实时修改标签
-        }
-        //圆弧效果  样式效果..
-      }
-    ]
-  }
-  myChart.setOption(option);
+    //echarts
+    const myChart = echarts.init(document.getElementById('main'))
+    //配置项和数据
+    const option = {
+        //标题组件
+        title: {
+            text: '',//主标题
+            textStyle: {}//文本样式
+            //还有阴影效果，内边距 外边距 背景颜色
+        },
+        //图例组件
+        legend: {
+            show: Boolean//显示每条小型信息
+        },
+        grid: {
+            show: Boolean,//显示直角坐标
+            containLabel: Boolean,//grid 区域是否包含坐标轴的刻度标签。
+            //边距距离 背景颜色 阴影
+        },
+        //x轴
+        xAxis: {
+            data: [],//数据
+            show: Boolean,//是否显示x轴
+            type: '',//坐标轴类型 数据value 时间time 类目category
+            max: "",//坐标轴刻度值 值为 n-1  特殊值 'dataMax'，此时取数据在该轴上的最大值作为最大刻度
+            splitLine: {//分割线
+                show: Boolean,//是否显示分隔线。默认数值轴显示，类目轴不显示。
+            }
+            //定位 文字样式
+        },
+        //y轴
+        yAxis: {
+            data: [],//数据
+            show: Boolean,//是否显示y轴
+            type: '',//坐标轴类型 数据value 时间time 类目category
+            inverse: Boolean,//是否反向坐标轴
+            //定位 文字样式 分割线 等
+        },
+        //
+        series: [
+            {
+                type: '',//图类型 bar柱状图
+                data: [],
+                name: '',//柱条命名
+                realtimeSort: Boolean,//是否动态排序
+                stack: '',//用来表明哪些系列将被堆积在一起，理论上只要取值相同即可，具体的取值并没有什么区别
+                smooth:Boolean,//是否平滑曲线显示
+                step:'start middle end',//是否是阶梯线图 在当前点，当前点与下个点的中间点，下个点拐弯
+                label: {
+                    show: Boolean,//是否显示柱条数据标签
+                    position: '',//数据标签的位置 top left ..
+                    valueAnimation: Boolean,//实时修改标签
+                }
+                //圆弧效果  样式效果..
+            }
+        ]
+    }
+    myChart.setOption(option);
 </script>
 </body>
 </html>

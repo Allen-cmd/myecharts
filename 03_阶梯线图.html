@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="echarts.js"></script>
+</head>
+<body>
+<div id="main" style="width: 600px;height:400px"></div>
+<script>
+  //echarts
+  const myChart = echarts.init(document.getElementById('main'))
+  //配置项和数据
+  const option = {
+    xAxis: {
+      typeL:'category',
+      data:['A','B','C','D','E','F']
+    },
+    yAxis: {
+      type:"value"
+    },
+    series: [
+      {
+        name:'Step start',
+        step:'start',
+        data:[20,30,15,25,35,22],
+        type:'line',
+      },
+      {
+        name:'Step middle',
+        step:'middle',
+        data:[30,20,25,35,10],
+        type:'line',
+      },
+      {
+        name:'Step end',
+        step:'end',
+        data:[10,15,20,25,30,35],
+        type:'line',
+      }
+
+    ]
+  }
+  myChart.setOption(option);
+</script>
+</body>
+</html>
